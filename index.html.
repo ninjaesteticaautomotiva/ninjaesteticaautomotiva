@@ -1,4 +1,680 @@
 
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#101210">
+
+  <meta name="description" content="Ninja Estética Automotiva. Cuidado, proteção e acabamento para seu carro ou moto em Pinhão-PR.">
+
+  <title>Ninja Estética Automotiva | Pinhão-PR</title>
+
+  <style>
+
+    :root {
+
+      --green: #8bc900;
+
+      --black: #101210;
+
+      --panel: #191c18;
+
+      --white: #f5f6f2;
+
+      --gray: #b8bdb3;
+
+    }
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      background: var(--black);
+
+      color: var(--white);
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      line-height: 1.6;
+
+    }
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+    .container {
+
+      width: min(1100px, 90%);
+
+      margin: auto;
+
+    }
+
+    header {
+
+      border-bottom: 1px solid #30352c;
+
+      padding: 20px 0;
+
+    }
+
+    nav {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 16px;
+
+    }
+
+    .logo {
+
+      font-size: 19px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+    }
+
+    .logo span,
+
+    .green {
+
+      color: var(--green);
+
+    }
+
+    .nav-link {
+
+      color: var(--green);
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+    }
+
+    .hero {
+
+      padding: 90px 0 80px;
+
+      background:
+
+        radial-gradient(ellipse at 85% 20%,
+
+        #293719 0%, var(--black) 58%);
+
+    }
+
+    .eyebrow {
+
+      color: var(--green);
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+
+    }
+
+    h1 {
+
+      font-size: clamp(38px, 8vw, 72px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+
+      max-width: 750px;
+
+      margin-bottom: 24px;
+
+    }
+
+    h1 span {
+
+      color: var(--green);
+
+    }
+
+    .hero p {
+
+      color: var(--gray);
+
+      max-width: 570px;
+
+      font-size: 17px;
+
+      margin-bottom: 30px;
+
+    }
+
+    .button {
+
+      display: inline-block;
+
+      background: var(--green);
+
+      color: #101210;
+
+      padding: 14px 22px;
+
+      border-radius: 4px;
+
+      font-weight: bold;
+
+      transition: 0.2s;
+
+    }
+
+    .button:hover {
+
+      background: #a5e52b;
+
+    }
+
+    .section {
+
+      padding: 70px 0;
+
+    }
+
+    .section h2 {
+
+      font-size: clamp(27px, 5vw, 40px);
+
+      line-height: 1.2;
+
+      margin-bottom: 14px;
+
+    }
+
+    .intro {
+
+      color: var(--gray);
+
+      max-width: 620px;
+
+      margin-bottom: 32px;
+
+    }
+
+    .services {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 16px;
+
+    }
+
+    .service {
+
+      background: var(--panel);
+
+      border: 1px solid #30352c;
+
+      border-radius: 7px;
+
+      padding: 24px;
+
+    }
+
+    .service .number {
+
+      color: var(--green);
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+      letter-spacing: 2px;
+
+    }
+
+    .service h3 {
+
+      font-size: 19px;
+
+      margin: 12px 0 8px;
+
+    }
+
+    .service p {
+
+      color: var(--gray);
+
+      font-size: 14px;
+
+    }
+
+    .about {
+
+      background: #171a16;
+
+      border-top: 1px solid #30352c;
+
+      border-bottom: 1px solid #30352c;
+
+    }
+
+    .about p {
+
+      color: var(--gray);
+
+      max-width: 700px;
+
+      margin-top: 16px;
+
+    }
+
+    .promise {
+
+      border-left: 3px solid var(--green);
+
+      padding: 12px 0 12px 20px;
+
+      margin-top: 25px;
+
+      font-size: 20px;
+
+      font-weight: bold;
+
+    }
+
+    .contact {
+
+      text-align: center;
+
+    }
+
+    .contact p {
+
+      color: var(--gray);
+
+      margin: 12px auto 25px;
+
+    }
+
+    footer {
+
+      border-top: 1px solid #30352c;
+
+      padding: 24px 0;
+
+      color: var(--gray);
+
+      font-size: 12px;
+
+      text-align: center;
+
+    }
+
+    .whatsapp {
+
+      position: fixed;
+
+      right: 18px;
+
+      bottom: 18px;
+
+      z-index: 10;
+
+      background: #25d366;
+
+      color: #07190c;
+
+      border-radius: 30px;
+
+      padding: 13px 17px;
+
+      font-weight: bold;
+
+      box-shadow: 0 4px 20px #0008;
+
+    }
+
+    @media (max-width: 700px) {
+
+      .services {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .hero {
+
+        padding: 65px 0;
+
+      }
+
+      .section {
+
+        padding: 55px 0;
+
+      }
+
+      .logo {
+
+        font-size: 16px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <nav class="container">
+
+      <a class="logo" href="#inicio">
+
+        NINJA <span>ESTÉTICA</span>
+
+      </a>
+
+      <a class="nav-link" href="#contato">FALE CONOSCO ↗</a>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="container">
+
+        <div class="eyebrow">Estética automotiva · Pinhão, PR</div>
+
+        <h1>
+
+          Seu veículo.<br>
+
+          Nosso cuidado.<br>
+
+          <span>Resultado ninja.</span>
+
+        </h1>
+
+        <p>
+
+          Mais cuidado, aparência e proteção para seu carro
+
+          ou moto. Tratamos cada detalhe com atenção,
+
+          técnica e dedicação.
+
+        </p>
+
+        <a class="button"
+
+           href="https://wa.me/5542991076450?text=Ol%C3%A1%21%20Quero%20conhecer%20os%20servi%C3%A7os%20da%20Ninja%20Est%C3%A9tica%20Automotiva."
+
+           target="_blank" rel="noopener">
+
+          SOLICITAR ORÇAMENTO ↗
+
+        </a>
+
+      </div>
+
+    </section>
+
+    <section class="section" id="servicos">
+
+      <div class="container">
+
+        <div class="eyebrow">Nosso trabalho</div>
+
+        <h2>Cuidado em cada detalhe.</h2>
+
+        <p class="intro">
+
+          Serviços de estética automotiva escolhidos
+
+          conforme a necessidade de cada veículo.
+
+          Consulte-nos para um orçamento personalizado.
+
+        </p>
+
+        <div class="services">
+
+          <article class="service">
+
+            <div class="number">01 / LIMPEZA</div>
+
+            <h3>Lavagem técnica</h3>
+
+            <p>
+
+              Limpeza cuidadosa para valorizar a aparência
+
+              e preservar as superfícies do veículo.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <div class="number">02 / INTERIOR</div>
+
+            <h3>Higienização interna</h3>
+
+            <p>
+
+              Cuidado com bancos, carpetes e superfícies
+
+              internas, conforme os materiais e a necessidade.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <div class="number">03 / PINTURA</div>
+
+            <h3>Polimento</h3>
+
+            <p>
+
+              Avaliação da pintura e tratamento adequado
+
+              para melhorar o acabamento e o brilho.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <div class="number">04 / PROTEÇÃO</div>
+
+            <h3>Proteção de pintura</h3>
+
+            <p>
+
+              Opções de proteção para ajudar a conservar
+
+              o acabamento do veículo.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <div class="number">05 / DETALHES</div>
+
+            <h3>Revitalização de faróis</h3>
+
+            <p>
+
+              Tratamento para melhorar a aparência dos faróis,
+
+              conforme o estado de cada peça.
+
+            </p>
+
+          </article>
+
+          <article class="service">
+
+            <div class="number">06 / PERSONALIZADO</div>
+
+            <h3>Outros cuidados</h3>
+
+            <p>
+
+              Entre em contato para avaliar as necessidades
+
+              do seu carro ou da sua moto.
+
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section about" id="sobre">
+
+      <div class="container">
+
+        <div class="eyebrow">Nossa essência</div>
+
+        <h2>Não é só limpeza.<br><span class="green">É cuidado de verdade.</span></h2>
+
+        <p>
+
+          Na Ninja Estética Automotiva, cada veículo merece
+
+          atenção aos detalhes. Nosso objetivo é oferecer
+
+          um serviço cuidadoso, transparente e adequado
+
+          às necessidades de cada cliente.
+
+        </p>
+
+        <div class="promise">
+
+          Porque para ficar bom,<br>
+
+          tem que ser ninja!
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section contact" id="contato">
+
+      <div class="container">
+
+        <div class="eyebrow">Vamos conversar?</div>
+
+        <h2>Seu veículo merece esse cuidado.</h2>
+
+        <p>
+
+          Fale conosco pelo WhatsApp e solicite seu orçamento.
+
+        </p>
+
+        <a class="button"
+
+           href="https://wa.me/5542991076450?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento."
+
+           target="_blank" rel="noopener">
+
+          CHAMAR NO WHATSAPP ↗
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="container">
+
+      NINJA ESTÉTICA AUTOMOTIVA · PINHÃO – PR
+
+      <br>
+
+      Porque para ficar bom, tem que ser ninja!
+
+    </div>
+
+  </footer>
+
+  <a class="whatsapp"
+
+     href="https://wa.me/5542991076450?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ninja."
+
+     target="_blank" rel="noopener"
+
+     aria-label="Conversar com a Ninja pelo WhatsApp">
+
+    WhatsApp ↗
+
+  </a>
+
+</body>
+
+</html>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
